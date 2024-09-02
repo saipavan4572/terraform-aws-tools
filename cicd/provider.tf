@@ -9,7 +9,7 @@ terraform {
     bucket = "pspkdevops-terraform-remote-state"
     key    = "jenkins-terraform"
     region = "us-east-1"
-    dynamodb_table = "pspkdevops-locking"
+    dynamodb_table = "pspkdevops-terraform-lock"
   }
 }
 
