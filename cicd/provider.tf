@@ -6,7 +6,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "pspkdevops-remote-state"
+    bucket = "pspkdevops-terraform-remote-state"
     key    = "jenkins-terraform"
     region = "us-east-1"
     dynamodb_table = "pspkdevops-locking"
