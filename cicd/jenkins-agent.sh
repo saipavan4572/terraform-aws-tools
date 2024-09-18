@@ -3,6 +3,7 @@
 yum install fontconfig java-17-openjdk -y
 yum install -y yum-utils
 yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+## since we are running terraform commands in jenkins-agent so we need to install terraform as well.
 yum -y install terraform
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
