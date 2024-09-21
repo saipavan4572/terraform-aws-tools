@@ -5,7 +5,7 @@
 * AnsiColor
 * Pipeline Utility Steps
 * Nexus Artifact Uploader
-* Rebuild
+* Rebuilder
 
 Restart Jenkins once plugins are installed
 
