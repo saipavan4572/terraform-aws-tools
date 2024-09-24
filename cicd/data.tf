@@ -19,25 +19,26 @@ data "aws_ami" "ami_info" {
     }
 }
 
-# data "aws_ami" "nexus_ami_info" {
+data "aws_ami" "nexus_ami_info" {
 
-#     most_recent = true
-#     owners = ["679593333241"]
+    most_recent = true
+    owners = ["852699756283"]
 
-#     filter {
-#         name   = "name"
-#         //values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20240511-*"]  // We are not going to use this as we are unable to subscribe to this AMI and getting errors like payment failed.
-#           values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20230109-*"]
-#         //community AMI::  SolveDevOps-Nexus-Server-Ubuntu20.04-20230109-90ee818a-7c5dedd5-58ec-4c82-b20e-fb1f805a0304
-#     }
+    filter {
+        name   = "name"
+        //values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20240511-*"]  // We are not going to use this as we are unable to subscribe to this AMI and getting errors like payment failed.
+        //values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20230109-*"]
+        //community AMI::  SolveDevOps-Nexus-Server-Ubuntu20.04-20230109-90ee818a-7c5dedd5-58ec-4c82-b20e-fb1f805a0304
+        values = ["NEXUS-01-07-2024"]
+    }
 
-#     filter {
-#         name   = "root-device-type"
-#         values = ["ebs"]
-#     }
+    filter {
+        name   = "root-device-type"
+        values = ["ebs"]
+    }
 
-#     filter {
-#         name   = "virtualization-type"
-#         values = ["hvm"]
-#     }
-# }
+    filter {
+        name   = "virtualization-type"
+        values = ["hvm"]
+    }
+}
