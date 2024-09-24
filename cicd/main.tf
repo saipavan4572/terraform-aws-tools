@@ -59,7 +59,7 @@ module "nexus" {
   }
 }
 
-module "nexus" {            
+/* module "nexus" {            
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "my-nexus"
   instance_type          = "t3.small"
@@ -67,12 +67,12 @@ module "nexus" {
   ##subnet_id = "subnet-0ea509ad4cba242d7" #replace your Subnet
   vpc_security_group_ids = ["sg-0505b4e2b3a31cef0"]
   subnet_id = "subnet-0860e40f188df6d66"
-  ami = data.aws_ami.nexus_ami_info.id
-##  user_data = file("nexus.sh")
+  ami = data.aws_ami.ami_info.id
+  user_data = file("nexus.sh")
   tags = {
     Name = "my-nexus"
   }
-}
+} */
 
 
 module "records" {
