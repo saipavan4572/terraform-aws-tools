@@ -37,7 +37,7 @@ resource "aws_key_pair" "tools" {
   # ~ means windows home directory
 }
 
-module "nexus" {
+/* module "nexus" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
   name = "nexus"
@@ -57,12 +57,12 @@ module "nexus" {
   tags = {
     Name = "nexus"
   }
-}
+} */
 
-/* module "nexus" {            
+module "nexus" {            
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "my-nexus"
-  instance_type          = "t3.small"
+  instance_type          = "t3.medium"
   ##vpc_security_group_ids = ["sg-0fea5e49e962e81c9"] #replace your SG
   ##subnet_id = "subnet-0ea509ad4cba242d7" #replace your Subnet
   vpc_security_group_ids = ["sg-0505b4e2b3a31cef0"]
@@ -72,7 +72,7 @@ module "nexus" {
   tags = {
     Name = "my-nexus"
   }
-} */
+}
 
 
 module "records" {

@@ -19,7 +19,7 @@ data "aws_ami" "ami_info" {
     }
 }
 
-data "aws_ami" "nexus_ami_info" {
+/* data "aws_ami" "nexus_ami_info" {
 
     most_recent = true
     owners = ["852699756283"]
@@ -41,4 +41,4 @@ data "aws_ami" "nexus_ami_info" {
         name   = "virtualization-type"
         values = ["hvm"]
     }
-}
+} */
