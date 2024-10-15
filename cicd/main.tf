@@ -22,6 +22,12 @@ module "jenkins_agent" {
   vpc_security_group_ids = ["sg-0505b4e2b3a31cef0"]
   subnet_id = "subnet-0860e40f188df6d66"
   ami = data.aws_ami.ami_info.id
+  root_block_device = [
+    {
+      volume_type = "gp3"
+      volume_size = 30
+    }
+  ]
   user_data = file("jenkins-agent.sh")
   tags = {
     Name = "jenkins-agent"
